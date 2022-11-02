@@ -1,0 +1,19 @@
+1) SELECT * FROM film;
+2) SELECT district,phone,postal_code FROM address;
+3) SELECT address  ' '  district ' '  postal_code AS full_address FROM address;
+4) SELECT title, rating, length FROM film WHERE rating = 'R';
+5) SELECT * FROM film WHERE length > 180;
+6) SELECT * FROM payment ORDER BY amount DESC LIMIT 10
+7) SELECT * FROM film ORDER BY title DESC LIMIT 5
+8) SELECT * FROM payment WHERE amount BETWEEN 1 AND 2 ORDER BY amount DESC 
+9) SELECT * FROM payment WHERE payment_date BETWEEN '2007-03-1' AND '2007-03-31'
+10) SELECT * FROM film WHERE title ILIKE '%north%'
+11) SELECT * FROM actor WHERE last_name ILIKE 'W%'
+12) SELECT * FROM actor WHERE first_name ILIKE 'y' OR last_name ILIKE 'y'
+My invented queries:
+1) SELECT * FROM actor WHERE first_name ILIKE '%y%' OR last_name ILIKE '%y' (Display people with names that include y somewhere in the first name or y at the end of their last name)
+2) SELECT city FROM city WHERE city ILIKE '%city%' (Display a list of cities with city in the name)
+3) SELECT * from country WHERE country ILIKE '%d s%' (Display a country that includes "d s"
+4) SELECT name FROM language ORDER BY name DESC LIMIT 1 (Display only the word "Mandarin")
+5) SELECT * FROM payment ORDER BY amount (Find the first customer from a list of customer ordered by how much they paid and display only his name)
+5b)SELECT first_name FROM customer WHERE customer_id=457 (answer=Bill)
